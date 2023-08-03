@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run a command') {
+            steps {
+               sh 'date'
+               sh 'pwd'
+               sh 'whoami'
+            //   sh 'cal 2023'
+              
+            }
+        }
+         stage('test') {
+            steps {
+                echo 'stage for test'
+            }
+        }
+         stage('production') {
+            steps {
+                echo 'stage for production'
+            }
+        }
+    }
+}
